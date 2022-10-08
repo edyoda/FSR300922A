@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookmarking</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .header {
+        background-color: black;
+        padding: 10px 20px;
+      }
+      .nav-item {
+        color: white;
+        margin: 0px 4px;
+        padding: 4px;
+      }
+      .card {
+        border: 1px solid grey;
+        width: 250px;
+        margin: 20px auto;
+        border-radius: 4px;
+        box-shadow: 2px 4px 4px lightgray;
+      }
+      .card-img {
+        height: 250px;
+        width: 250px;
+      }
+      .image {
+        height: 100%;
+        width: 100%;
+      }
+      .card-heading {
+        margin: 20px;
+        color: brown;
+        text-align: center;
+        text-shadow: 3px 8px 4px red;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="#eye"> <span class="nav-item">Eye</span></a>
+      <a href="#girl"> <span class="nav-item">Girl</span></a>
+      <a href="#photographer"> <span class="nav-item">Photographer</span></a>
+      <a href="#flag"> <span class="nav-item">Flag</span></a>
+    </div>
+
+    <div class="main-container">
+      <div class="card" id="eye">
+        <div class="card-img">
+          <img class="image" src="./image.jpeg" alt="a local image" />
+        </div>
+        <p class="card-heading">An Eye</p>
+      </div>
+      <div class="card" id="photographer">
+        <div class="card-img">
+          <img
+            class="image"
+            src="https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
+            alt="a local image"
+          />
+        </div>
+        <p class="card-heading">A Photographer</p>
+      </div>
+      <div class="card" id="flag">
+        <div class="card-img">
+          <img
+            class="image"
+            src="https://static.toiimg.com/photo/85301692/85301692.jpg?imgsize=1301803"
+            alt="a local image"
+          />
+        </div>
+        <p class="card-heading">A Flag</p>
+      </div>
+      <div class="card" id="girl">
+        <div class="card-img">
+          <img
+            class="image"
+            src="https://i.pinimg.com/originals/0f/d4/b3/0fd4b313f132200ed2a42b7979b824b4.jpg"
+            alt="a local image"
+          />
+        </div>
+        <p class="card-heading">A Girl</p>
+      </div>
+    </div>
+  </body>
+</html>
