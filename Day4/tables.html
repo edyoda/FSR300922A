@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin: 30px auto;
+      }
+      td,
+      th {
+        border: 1px solid brown;
+        padding: 8px;
+      }
+      .time-table {
+        background-color: gainsboro;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Let's create a Table</h1>
+
+    <table>
+      <caption>
+        First Table
+      </caption>
+
+      <tr>
+        <th>Col1</th>
+        <th>Col2</th>
+        <th>Col3</th>
+      </tr>
+
+      <tr>
+        <td>First</td>
+        <td>Second</td>
+        <td>Third</td>
+      </tr>
+      <tr>
+        <td>One</td>
+        <td>Two</td>
+        <td>Three</td>
+      </tr>
+    </table>
+
+    <table class="time-table">
+      <caption>
+        Time Table
+      </caption>
+      <tr>
+        <td rowspan="7">Hours</td>
+      </tr>
+      <tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Art</td>
+        <td>English</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Art</td>
+        <td>English</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <td colspan="5">Lunch break</td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Art</td>
+        <td>English</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Art</td>
+        <td>English</td>
+        <td>Sports</td>
+      </tr>
+    </table>
+  </body>
+</html>
