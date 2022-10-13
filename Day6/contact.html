@@ -91,6 +91,16 @@
         cursor: pointer;
         color: darkorange;
       }
+      .btn:hover {
+        background-color: darkorange;
+        color: white;
+      }
+      .btn:disabled {
+        background-color: gray;
+        color: white;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
       footer {
         padding: 10px;
         text-align: center;
@@ -142,7 +152,7 @@
             name="phone"
             type="text"
             maxlength="10"
-            placeholder="Enter 10 digit phone number "
+            placeholder="Enter 10 digit phone number"
           />
         </div>
         <div class="input-item">

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day7</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+      form {
+        margin: 40px auto;
+        max-width: 460px;
+      }
+      .input-item {
+        margin-bottom: 20px;
+      }
+      .input-item label {
+        display: block;
+        text-align: left;
+        margin-bottom: 4px;
+      }
+      .form-field {
+        padding: 20px;
+      }
+      .input-item input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .input-item sup {
+        color: red;
+      }
+      .input-item select {
+        width: 100%;
+        padding: 8px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        margin: 20px 0px;
+        width: 40%;
+        border-radius: 20px;
+        background-color: salmon;
+        color: white;
+        min-width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h3>Welcome to Day 7</h3>
+      <form>
+        <fieldset class="form-field">
+          <legend>Login Form</legend>
+          <div class="input-item">
+            <label for="name">Name<sup>*</sup></label>
+            <input required id="name" name="name" />
+          </div>
+          <div class="input-item">
+            <label for="email">Email<sup>*</sup></label>
+            <input required type="email" id="email" name="email" />
+          </div>
+          <div class="input-item">
+            <label for="pwd">Password<sup>*</sup></label>
+            <input required type="password" id="pwd" name="pwd" />
+          </div>
+          <div class="input-item">
+            <label for="user-type">User Type</label>
+            <select id="user-type" name="user-type">
+              <option value="">Choose user type</option>
+              <optgroup label="Admins">
+                <option value="super-admin">Super Admin</option>
+                <option value="senior-admin">Senior Admin</option>
+                <option value="junior-admin">Junior Admin</option>
+              </optgroup>
+              <optgroup label="Users">
+                <option value="m-user">Metropolitian User</option>
+                <option value="r-user">Remote User</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="input-item">
+            <label for="country">Country</label>
+            <input
+              placeholder="Choose your country"
+              id="country"
+              list="country-suggestions"
+            />
+            <datalist id="country-suggestions">
+              <option value="India"></option>
+              <option value="Pakistan"></option>
+              <option value="Australia"></option>
+              <option value="America"></option>
+              <option value="Sri Lanka"></option>
+              <option value="China"></option>
+              <option value="Russia"></option>
+              <option value="Ukraine"></option>
+              <option value="Uk"></option>
+            </datalist>
+          </div>
+        </fieldset>
+        <button class="btn">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
