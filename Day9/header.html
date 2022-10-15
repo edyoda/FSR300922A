@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout</title>
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFya35VHOD_J69qThT4PeIRMwQHuGN-ca3-w&usqp=CAU"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Raleway", sans-serif;
+      }
+      .header {
+        padding: 8px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 4px 4px #ccc;
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+      }
+      .header-right {
+        display: flex;
+        align-items: center;
+      }
+      .header-left nav {
+        margin-left: 20px;
+      }
+      .header-left nav span {
+        margin: 4px;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 2px;
+        font-size: 12px;
+      }
+      .header-left nav span:hover {
+        background-color: rgba(211, 211, 211, 0.3);
+      }
+      .logo p {
+        font-weight: 900;
+        color: blue;
+        font-size: 20px;
+      }
+      .logo span {
+        color: gray;
+        font-style: italic;
+        font-size: 14px;
+      }
+      .icon {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+      .user-name {
+        font-size: 12px;
+      }
+
+      .user-image {
+        height: 40px;
+        width: 40px;
+        margin-left: 8px;
+      }
+      .user-image img {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <p>EDYODA</p>
+          <span>Stories</span>
+        </div>
+        <nav>
+          <span>Home</span>
+          <span>About</span>
+        </nav>
+      </div>
+      <div class="header-right">
+        <span class="icon">
+          <i class="fa-solid fa-bell"></i>
+        </span>
+        <span class="user-name">Utkarsh Gupta</span>
+        <div class="user-image">
+          <img
+            src="https://www.pngmart.com/files/22/User-Avatar-Profile-Background-Isolated-PNG.png"
+          />
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
