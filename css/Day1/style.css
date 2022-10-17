@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  background-color: blue;
+  padding: 20px;
+}
+.purple {
+  background-color: purple;
+}
+/* Descendant selector */
+.box p {
+  background-color: yellow;
+}
+.inner-box-child span {
+  background-color: red;
+}
+
+.box > p {
+  background-color: silver;
+}
+.box > div {
+  background-color: grey;
+}
+.box > div > p {
+  background-color: green;
+}
+/* direct child selector*/
+/* .container > span {
+  color: coral;
+} */
+
+/* adjacent sibling selector */
+/* 
+.container span + div {
+  color: aqua;
+} */
+
+/* General Sibling Selector */
+.container p ~ div {
+  color: violet;
+}
