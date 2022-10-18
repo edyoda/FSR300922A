@@ -1,0 +1,86 @@
+h1 {
+  color: salmon;
+  text-decoration: overline;
+  text-transform: lowercase;
+  font-size: 23px;
+}
+
+button {
+  background-color: salmon;
+  padding: 8px;
+  border-radius: 2px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+span {
+  background-color: red;
+}
+
+.box {
+  padding: 8px;
+  margin: 8px;
+  background-color: darkorchid;
+  color: white;
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
+}
+
+.visible {
+  visibility: hidden;
+}
+
+.container {
+  height: 250px;
+  border: 2px solid black;
+  margin: 50px;
+  position: relative;
+}
+
+.inner-box {
+  padding: 10px;
+  background-color: salmon;
+  color: white;
+  display: inline-block;
+}
+
+.relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+
+.relative-sibling {
+  position: relative;
+  top: 30px;
+  left: 40px;
+}
+
+.absolute {
+  position: absolute;
+  background-color: violet;
+  right: 0px;
+  bottom: 0px;
+}
+.absolute-2 {
+  position: absolute;
+  background-color: brown;
+  top: -20px;
+  right: -40px;
+}
+
+.center {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 35px);
+  bottom: 50%;
+  right: 50%;
+  width: 70px;
+  height: 20px;
+}
