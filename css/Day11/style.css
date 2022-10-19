@@ -38,7 +38,7 @@ span {
   height: 250px;
   border: 2px solid black;
   margin: 50px;
-  position: relative;
+  position: static;
 }
 
 .inner-box {
@@ -83,4 +83,10 @@ span {
   right: 50%;
   width: 70px;
   height: 20px;
+}
+
+.outer-container {
+  padding: 50px;
+  border: 2px solid red;
+  position: relative;
 }
