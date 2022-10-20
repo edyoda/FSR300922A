@@ -1,0 +1,22 @@
+.box {
+  margin: 20px;
+  height: 250px;
+  border: 1px solid red;
+  background-image: radial-gradient(circle farthest-corner at left, red, green);
+}
+
+p {
+  background-color: lightblue;
+  white-space: nowrap;
+  width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.container {
+  height: 0px;
+  width: 0px;
+  border-left: 20px solid red;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
