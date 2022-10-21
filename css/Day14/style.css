@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-body {
+  display: flex;
+  width: 100%;
+}
+
+.side-bar {
+  border-right: 1px solid #ccc;
+  min-height: 100vh;
+  width: 180px;
+  padding: 18px;
+  position: fixed;
+  background-color: white;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+.logo > img {
+  height: 100%;
+  width: 100%;
+}
+
+.side-nav-bar {
+  margin: 50% 0px 40px;
+  list-style-type: none;
+}
+.side-nav-bar > li {
+  padding: 8px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+}
+
+.side-nav-bar > li > i {
+  margin-right: 8px;
+}
+.side-nav-bar > li:hover {
+  background-color: #fafaff;
+}
+
+.side-nav-bar > li:hover span {
+  font-weight: 600;
+}
+
+.main-section {
+  min-height: 100vh;
+  width: 70%;
+  flex-grow: 1;
+  margin-left: 200px;
+}
+
+.header {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 18px;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  padding: 8px 0px;
+}
+.left-header span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.left-header span b {
+  font-size: 28px;
+  margin-right: 4px;
+}
+.user-icon {
+  height: 30px;
+  width: 30px;
+  background-color: pink;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  cursor: pointer;
+  position: relative;
+}
+
+.box {
+  margin: 20px 20px 20px 0px;
+  height: 200px;
+  border: 2px solid brown;
+}
+
+.green-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: lightgreen;
+}
+
+.red-badge {
+  padding: 2px;
+  border-radius: 50%;
+  background-color: salmon;
+  position: absolute;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  top: 0;
+  left: 14px;
+  height: 16px;
+  width: 16px;
+}
