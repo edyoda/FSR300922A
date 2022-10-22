@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-body {
+  display: flex;
+  width: 100%;
+}
+
+.side-bar {
+  border-right: 1px solid #ccc;
+  min-height: 100vh;
+  width: 180px;
+  padding: 18px;
+  position: fixed;
+  background-color: white;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+.logo > img {
+  height: 100%;
+  width: 100%;
+}
+
+.side-nav-bar {
+  margin: 50% 0px 40px;
+  list-style-type: none;
+}
+.side-nav-bar > li {
+  padding: 8px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+}
+
+.side-nav-bar > li > i {
+  margin-right: 8px;
+}
+.side-nav-bar > li:hover {
+  background-color: #fafaff;
+}
+
+.side-nav-bar > li:hover span {
+  font-weight: 600;
+}
+
+.main-section {
+  min-height: 100vh;
+  width: 70%;
+  flex-grow: 1;
+  margin-left: 200px;
+}
+
+.header {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 18px;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  padding: 8px 0px;
+  z-index: 99999;
+}
+.left-header span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.left-header span b {
+  font-size: 28px;
+  margin-right: 4px;
+}
+.user-icon {
+  height: 30px;
+  width: 30px;
+  background-color: pink;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  cursor: pointer;
+  position: relative;
+}
+
+.box {
+  margin: 20px 20px 20px 0px;
+  height: 200px;
+  border: 2px solid brown;
+}
+
+.green-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: lightgreen;
+}
+
+.red-badge {
+  padding: 2px;
+  border-radius: 50%;
+  background-color: salmon;
+  position: absolute;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  top: 0;
+  left: 14px;
+  height: 16px;
+  width: 16px;
+}
+
+.hero-banner {
+  height: 250px;
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.hero-banner > img {
+  height: 100%;
+  width: 100%;
+}
+
+.features-container {
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.container > h4 {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.container > h4 > sub {
+  height: 8px;
+  width: 8px;
+  background-color: lightgreen;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.container > h4:hover {
+  border-bottom: 1px solid black;
+}
+
+.features-cards-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features-card {
+  margin: 10px;
+  width: calc(50% - 40px);
+  height: 300px;
+  background-image: url("https://www.apple.com/v/home/at/images/promos/apple-watch-ultra/promo_apple_watch_ultra__gnsqulvdc4a6_medium_2x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 320px;
+  background-color: red;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .features-card > img {
+  height: 100%;
+  width: 100%;
+} */
+
+.card-2 {
+  background-image: url("https://www.apple.com/v/home/at/images/promos/apple-watch-series-8/promo_apple_watch_series_8__ch7rexplmihe_medium_2x.jpg");
+}
+
+.faded-background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.round-view-feature {
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.features-card:hover .faded-background {
+  display: flex;
+}
+
+.product-container {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.slider-item {
+  margin-right: 20px;
+  padding: 20px;
+  box-shadow: 4px 4px 4px #ccc;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.slider-item > img {
+  height: 200px;
+}
