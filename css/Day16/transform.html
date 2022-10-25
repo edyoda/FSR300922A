@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Transform -Day 16</title>
+    <style>
+      .box {
+        height: 200px;
+        width: 200px;
+        border: 2px solid brown;
+        background-color: coral;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+      .box-a {
+        transform: translate(45px, 20px);
+      }
+      .box-b {
+        transform: rotate(45deg);
+      }
+      .box-c {
+        transform: skew(45deg, 60deg);
+      }
+      .box-d {
+        transform: scale(2);
+      }
+      .box-e {
+        transform: translate(50%, 50%) rotate(45deg) scale(1.5);
+        height: 70px;
+        width: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-a">I am Box A</div>
+    <div class="box box-b">I am Box B</div>
+    <div class="box box-c">I am Box C</div>
+    <div class="box box-d">I am Box D</div>
+    <div class="box box-e">I am Box E</div>
+  </body>
+</html>

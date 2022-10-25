@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Transition -Day 16</title>
+    <style>
+      .box {
+        height: 200px;
+        width: 200px;
+        border: 2px solid brown;
+        background-color: coral;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        opacity: 0.3;
+      }
+      .box-a {
+        /* transition: opacity 500ms ease-in-out 1s, transform 4s ease-in-out 1s; */
+        transition-property: opacity, transform, background-color;
+        transition-duration: 500ms, 4s, 6s;
+        transition-delay: 1s;
+        transition-timing-function: ease-in-out;
+      }
+      .box-a:hover {
+        transform: translate(200px, 200px) scale(0.5);
+        opacity: 1;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-a">I am Box A</div>
+  </body>
+</html>
