@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Psuedo Classes</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      ul {
+        margin: 40px;
+        list-style-type: none;
+        width: 250px;
+      }
+      ul li {
+        position: relative;
+      }
+      ul li div {
+        padding: 8px;
+        background-color: pink;
+        margin-bottom: 10px;
+        border-radius: 4px;
+      }
+      ul li input {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+      }
+
+      ul li input:checked + div {
+        box-shadow: 4px 4px 4px #ccc;
+      }
+
+      ul li:first-child div {
+        background-color: aqua;
+      }
+      ul li:last-child div {
+        background-color: hotpink;
+      }
+
+      ul li:nth-last-child(2) div {
+        background-color: red;
+      }
+      ul li:nth-child(even) div {
+        background-color: blue;
+      }
+      ul li:nth-child(odd) div {
+        background-color: coral;
+      }
+      ul li:nth-child(2n + 1) div {
+        background-color: darkred;
+      }
+
+      .box {
+        height: 200px;
+        background-color: goldenrod;
+        margin: 40px;
+        position: relative;
+      }
+      .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0px;
+        width: 0px;
+        border-right: 20px solid red;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        transform: translateX(-100%);
+      }
+      .box::after {
+        content: "";
+        height: 100%;
+        width: 50%;
+        background-color: red;
+        position: absolute;
+        right: 0;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: gray;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: red;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Psuedo Classes</h1>
+    <ul>
+      <li>
+        <input type="checkbox" />
+        <div>Swetha</div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div>Vishnu</div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div>Gaurav</div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div>Sai</div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div>Ramesh</div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div>Rahul</div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div>Sujay</div>
+      </li>
+    </ul>
+    <div class="box">I am box</div>
+  </body>
+</html>
