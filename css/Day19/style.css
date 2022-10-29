@@ -166,10 +166,10 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .features-card {
-  margin: 10px;
   flex: 1;
   height: 300px;
   background-image: url("https://www.apple.com/v/home/at/images/promos/apple-watch-ultra/promo_apple_watch_ultra__gnsqulvdc4a6_medium_2x.jpg");
@@ -178,7 +178,7 @@
   border-radius: 4px;
   cursor: pointer;
   min-width: 290px;
-  background-color: red;
+  background-color: lightgray;
   position: relative;
   overflow: hidden;
   max-width: 360px;

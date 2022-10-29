@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day20 - Grid</title>
+
+    <style>
+      .container {
+        border: 2px solid brown;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        height: 500px;
+      }
+      .item {
+        padding: 20px;
+        text-align: center;
+        background-color: salmon;
+        color: white;
+        border: 1px solid red;
+      }
+      .item-a {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      .item-b {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+      .item-8 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      .container :last-child {
+        grid-column: 2 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn Grid</h1>
+
+    <div class="container">
+      <div class="item item-a">1</div>
+      <div class="item item-b">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item item-8">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+    </div>
+  </body>
+</html>

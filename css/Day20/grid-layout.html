@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day20 - Grid</title>
+
+    <style>
+      .container {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 60px auto 40px;
+        grid-template-columns: 150px 1fr 1fr;
+        grid-template-areas: "head head head" "side main main" "side foot foot";
+      }
+      header {
+        grid-area: head;
+        background-color: gray;
+      }
+      aside {
+        grid-area: side;
+        background-color: gold;
+      }
+      main {
+        grid-area: main;
+        background-color: salmon;
+      }
+      footer {
+        grid-area: foot;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <aside>side Bar</aside>
+      <main>Main Section</main>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
