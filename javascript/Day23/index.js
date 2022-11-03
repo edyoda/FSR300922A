@@ -69,7 +69,7 @@ if (null) {
   console.log("false");
 }
 
-var number = -1;
+var number = 1;
 
 var result = Boolean(number);
 var result = String(number);
