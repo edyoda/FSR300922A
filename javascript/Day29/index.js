@@ -76,7 +76,7 @@ let min_array = [13, 40, 10, 5, 1, -1, -3, 12, 24];
 
 let min = Infinity;
 
-for (let i = 0; i < min_array.length - 1; i++) {
+for (let i = 0; i < min_array.length; i++) {
   const currentNumber = min_array[i];
 
   if (currentNumber <= min) {
