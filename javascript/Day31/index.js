@@ -36,3 +36,5 @@ const arrow_function = (name) => {
 
 arrow_function("Ahemad");
 xyz("utkarsh");
+
+"A".charCodeAt();
