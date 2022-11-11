@@ -35,7 +35,7 @@ function printTable(value) {
 }
 
 let x = 2;
-
+var y = 3;
 printTable(x);
 printTable(y);
 printTable(4);
