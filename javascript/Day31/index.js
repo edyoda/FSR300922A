@@ -38,3 +38,14 @@ arrow_function("Ahemad");
 xyz("utkarsh");
 
 "A".charCodeAt();
+
+const char = "a";
+
+const code = char.toLowerCase().charCodeAt();
+
+//check for alphabets
+if (code >= 97 && code <= 122) {
+  console.log("Alphabet");
+} else {
+  console.log("Non Alphabet");
+}
