@@ -57,7 +57,10 @@ console.log(`Hello ${x} ${y}`)
 const person = {
     name: 'Sara',
     age: 25,
-    gender: 'female'    
+    gender: 'female',
+    address:{
+        city:'Agra'
+    }
 }
 
 const name = "Utkarsh";
