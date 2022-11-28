@@ -182,7 +182,9 @@ var productList = [
   
   function createCard(item) {
     const link = document.createElement('a');
-    link.setAttribute('href',`/javascript/Day41/product.html?id=${item.id}`);
+    let {pathname} = location;
+    pathname = pathname.replace('index.html','product.html')
+    link.setAttribute('href',`${pathname}?id=${item.id}`);
     link.classList.add("card");
     link.setAttribute('data-id',item.id)
     const card = document.createElement("article");
