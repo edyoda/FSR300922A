@@ -1,0 +1,24 @@
+
+*{
+    margin: 0;
+}
+.students-table{
+    border-collapse: collapse;
+}
+.row td{
+    border: 1px solid brown;
+}
+
+.box{
+    height: 70px;
+    padding: 8px;
+    display: block;
+    background-color: coral; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
