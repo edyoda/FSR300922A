@@ -126,7 +126,7 @@ function addRowsIntoTable(){
         </tr>
     `; //html format string
 
-    const tr = $(newRow); // convert string into DOM element
+    const tr = $(newRow); // convert string into DOM element object
 
     table.append(tr);
     })
