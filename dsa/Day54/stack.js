@@ -12,7 +12,7 @@ class Stack{
         this.size=size;
     }
     push(value){
-        if(this.data.length<this.size){
+        if((this.size&&this.data.length<this.size)||!this.size){
              this.data.push(value);
              return this.data.length;
         }
