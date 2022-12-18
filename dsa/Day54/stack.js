@@ -13,13 +13,13 @@ class Stack{
     }
     push(value){
         if((this.size&&this.data.length<this.size)||!this.size){
-             this.data.push(value);
-             return this.data.length;
+             this.data.push(value); 
+             return this.data.length; 
         }
         console.log('Stack Overflow')
         return -1;
     }
-    pop(){
+     pop(){
         if(this.isEmpty()){
         console.log("Stack Underflow")
           return -1;  
