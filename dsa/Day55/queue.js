@@ -19,7 +19,6 @@ class Queue{
         console.log('Queue Oveflows')
         return -1;
     }
-    
     dequeue(){
         if(this.isEmpty()){
             console.log('Queue Underflow')
