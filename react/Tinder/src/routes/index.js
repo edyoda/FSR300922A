@@ -7,7 +7,7 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         {routesConfig.map((route) => (
-          <Route {...route} />
+          <Route {...route} key={route.path} />
         ))}
       </Routes>
     </BrowserRouter>

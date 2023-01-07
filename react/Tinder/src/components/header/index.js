@@ -5,17 +5,26 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
+
+  const onSignUpBtn = () => {
+   
+    navigate("/signup");
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <AcUnitIcon sx={{ marginRight: 4,fontSize:32 }} />
+          <AcUnitIcon sx={{ marginRight: 4, fontSize: 32 }} />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Tinder
           </Typography>
-          <Button color="inherit">Signup</Button>
+          <Button onClick={onSignUpBtn} color="inherit">
+            Signup
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
