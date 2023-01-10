@@ -1,17 +1,20 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { routesConfig } from "./config";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./config";
 
 const AppRoutes = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        {routesConfig.map((route) => (
-          <Route {...route} key={route.path} />
-        ))}
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default AppRoutes;
+
+{
+  /*
+    <BrowserRouter>
+      <Routes>
+        {router.map((route) => (
+          <Route {...route} key={route.path} />
+        ))}
+      </Routes>
+    </BrowserRouter>  */
+}

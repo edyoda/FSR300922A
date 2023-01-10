@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MLink from "@mui/material/Link";
@@ -11,6 +11,10 @@ import { TinderInput } from "../../components/input";
 import { validateForm } from "../../utils/validation";
 import { Link } from "react-router-dom";
 import { signupUser } from "../../services/auth";
+import { useNavigate } from "react-router-dom";
+import { addUserInfo } from "../../utils/localStorage";
+import { useDispatch } from "react-redux";
+import { setUserInfo } from "../../redux/actions/userActions";
 
 const initalValues = {
   email: "",
@@ -18,6 +22,8 @@ const initalValues = {
   confirmPassword: "",
 };
 const Signup = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [values, setValues] = useState(initalValues);
   const [errors, setErrors] = useState(initalValues);
 
@@ -36,15 +42,14 @@ const Signup = () => {
       const data = { email: values.email, password: values.password };
       signupUser(data)
         .then((res) => {
+          addUserInfo(res)
+          dispatch(setUserInfo(res));
+          navigate("/dashboard", { replace: true });
           console.log(res);
         })
         .catch((err) => {
           console.log(err);
         });
-      //submit the form
-      //make an api call to send values
-      //redirect to the user to dashaboard
-      //show error to user
     }
   };
 
