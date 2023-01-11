@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { getUserInfo } from "../../utils/localStorage";
 import { USER_ACTION_TYPES } from "../actions/actionTypes";
 
