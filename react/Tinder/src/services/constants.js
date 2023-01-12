@@ -1,6 +1,7 @@
-export const BASE_URL = "https://reqres.in/api/";
+export const BASE_URL = "https://reqres.in/api";
 
 export const endPoints = {
   signup: "/api/register",
-  usersList:'users?delay=3'
+  usersList:'/users',
+  userDetails:'/users'
 };

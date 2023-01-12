@@ -1,11 +1,15 @@
 import { Badge, Button } from "@mui/material";
 import React from "react";
+import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-const LikeRouteButton = () => {
-    const likeCount = 0;
-  const onClick = () => {};
+const LikeRouteButton = ({likesCount}) => {
+  const navigate = useNavigate()
+  const onClick = () => {
+    navigate('/likes')
+  };
   return (
-    <Badge showZero={false} badgeContent={likeCount} color="secondary">
+    <Badge showZero={false} badgeContent={likesCount} color="secondary">
       <Button onClick={onClick} color="inherit">
         Likes
       </Button>
@@ -13,4 +17,12 @@ const LikeRouteButton = () => {
   );
 };
 
-export default LikeRouteButton;
+
+const mapStateToProps = (state) => {
+  return {
+    likesCount: (state.utils.likesUsers||[]).length,
+  };
+};
+
+export default connect(mapStateToProps)(LikeRouteButton);
+

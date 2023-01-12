@@ -17,7 +17,7 @@ export const likeUser = (userDetails) => {
   
   export const dislikeUser = (userId) => {
     return {
-      type: UTILS_ACTION_TYPES.LIKE_USER,
+      type: UTILS_ACTION_TYPES.DISLIKE_USER,
       payload: userId,
     };
   };
