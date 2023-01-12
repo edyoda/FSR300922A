@@ -24,7 +24,6 @@ const LikeList = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            width: "100%",
             flexDirection:'column',
             margin: 8,
           }}
