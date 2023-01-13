@@ -15,7 +15,7 @@ const utilsReducers = (state = initalState, action) => {
       return { ...state, likesUsers: newList };
     }
     case UTILS_ACTION_TYPES.DISLIKE_USER: {
-      const newList = state.likesUsers.filter((i) => i.id !== action.payload);
+      const newList = state.likesUsers.filter((i) => String(i.id) !== String(action.payload));
       return { ...state, likesUsers: newList };
     }
     default:

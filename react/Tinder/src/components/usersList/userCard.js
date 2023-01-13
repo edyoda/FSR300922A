@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -9,9 +9,18 @@ import { connect } from "react-redux";
 import { likeUser, dislikeUser } from "../../redux/actions/utilsActions";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useNavigate } from "react-router-dom";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const UserCard = (props) => {
-  const { userDetails, likesUsers, dispatch } = props;
+  const {
+    userDetails,
+    likesUsers,
+    isSelected,
+    showDelete,
+    onSelectUser,
+    dispatch,
+  } = props;
   const navigate = useNavigate();
   const {
     avatar,
@@ -27,9 +36,9 @@ const UserCard = (props) => {
   const onUnLikeUser = () => {
     dispatch(dislikeUser(userId));
   };
-  const onCardClick = ()=>{
-    navigate(`/user?userId=${userId}`)
-  }
+  const onCardClick = () => {
+    navigate(`/user?userId=${userId}`);
+  };
 
   const isLiked = Boolean((likesUsers || []).find((i) => i.id === userId));
   return (
@@ -51,14 +60,23 @@ const UserCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {isLiked && (
-          <IconButton color="secondary" onClick={onUnLikeUser}>
-            <FavoriteSharpIcon />
-          </IconButton>
+        {!showDelete && (
+          <React.Fragment>
+            {isLiked && (
+              <IconButton color="secondary" onClick={onUnLikeUser}>
+                <FavoriteSharpIcon />
+              </IconButton>
+            )}
+            {!isLiked && (
+              <IconButton color="secondary" onClick={onLikeUser}>
+                <FavoriteBorderIcon />
+              </IconButton>
+            )}
+          </React.Fragment>
         )}
-        {!isLiked && (
-          <IconButton color="secondary" onClick={onLikeUser}>
-            <FavoriteBorderIcon />
+        {showDelete && (
+          <IconButton color="secondary" onClick={() => onSelectUser(userId)}>
+            {!isSelected ? <DeleteOutlineIcon /> : <DeleteIcon />}
           </IconButton>
         )}
       </CardActions>
