@@ -1,0 +1,16 @@
+.custom-container{
+    margin: 20px;
+    box-shadow: 2px 2px 2px #ccc;
+    border-radius: 4px;
+    background-color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.custom-container  h1{
+    margin: 20px;
+}

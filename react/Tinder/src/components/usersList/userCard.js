@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -30,17 +30,22 @@ const UserCard = (props) => {
     last_name,
   } = userDetails || {};
 
-  const onLikeUser = () => {
+  const onLikeUser = useCallback(() => {
     dispatch(likeUser(userDetails));
-  };
-  const onUnLikeUser = () => {
-    dispatch(dislikeUser(userId));
-  };
-  const onCardClick = () => {
-    navigate(`/user?userId=${userId}`);
-  };
+  }, [userDetails]);
 
-  const isLiked = Boolean((likesUsers || []).find((i) => i.id === userId));
+  const onUnLikeUser = useCallback(() => {
+    dispatch(dislikeUser(userId));
+  }, [userId]);
+
+  const onCardClick = useCallback(() => {
+    navigate(`/user?userId=${userId}`);
+  }, [userId]);
+
+  const isLiked = useMemo(() => {
+    return Boolean((likesUsers || []).find((i) => i.id === userId));
+  }, [likesUsers, userId]);
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea onClick={onCardClick}>

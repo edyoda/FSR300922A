@@ -6,6 +6,7 @@ import { getUserInfo } from "../utils/localStorage";
 import Dashboard from "../pages/dashboard";
 import UserPage from "../pages/user";
 import Likes from "../pages/likes";
+import NotFound from "../pages/not-found";
 
 export const router = createBrowserRouter([
   {
@@ -68,4 +69,8 @@ export const router = createBrowserRouter([
     path: "/likes",
     element: <Likes />,
   },
+  {
+    path:'*',
+    element:<NotFound/>
+  }
 ]);
